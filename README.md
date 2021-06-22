@@ -11,3 +11,20 @@ All Dapp Tokens are loaded into a liquidity pool(TokenFarm) and the Token Farm
 rewards investors through liquidity mining(yield farming).
 
 User client side is a React App.
+
+## Installation
+
+For testing, you should have the following dependancies installed:
+
+1. Truffle
+2. Ganache -> Local block chain--> you can use any blockchain to test really 😃
+3. npm
+
+## Run
+
+`npm i` to install dependancies
+run `truffle compile` to create the abi(contracts).
+run `truffle migrate` to install it on your blockchain.
+you can use `truffle migrate --reset` to set up new contracts on the blockchain.
+
+run `npm run start` to interact with the blockchain through the front-end React app.
