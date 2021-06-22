@@ -100,6 +100,19 @@ contract("TokenFarm", ([owner, investor]) => {
         "true",
         "investor staking status is correct after staking"
       );
+
+      // Issue tokens test
+      await tokenFarm.issueTokens({ from: owner });
+
+      // Check balances after issuance
+      result = await dappToken.balanceOf(investor);
+      assert.equal(
+        result.toString(),
+        tokens("100"),
+        "investor DApp Token wallet balance correct after issuance"
+      );
+      // Ensure the owner is the only person who can call the contract
+      await tokenFarm.issueTokens({ from: investor }).should_be_rejected;
     });
   });
 });
