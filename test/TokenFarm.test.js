@@ -138,6 +138,13 @@ contract("TokenFarm", ([owner, investor]) => {
         tokens("0"),
         "investor staking balance correct after unstaking"
       );
+
+      result = await tokenFarm.isStaking(investor);
+      assert.equal(
+        result.toString(),
+        "false",
+        "investor staking status correct after staking"
+      );
     });
   });
 });
