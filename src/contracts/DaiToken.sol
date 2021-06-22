@@ -26,8 +26,11 @@ contract DaiToken {
         public
         returns (bool success)
     {
+        // Require balance of sender to be more than value
         require(balanceOf[msg.sender] >= _value);
+        // credit the senders account
         balanceOf[msg.sender] -= _value;
+        // debit the receiver account
         balanceOf[_to] += _value;
         emit Transfer(msg.sender, _to, _value);
         return true;
