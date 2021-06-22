@@ -16,15 +16,15 @@ User client side is a React App.
 
 For testing, you should have the following dependancies installed:
 
-1. Truffle
-2. Ganache -> Local block chain--> you can use any blockchain to test really 😃
-3. npm
+- 1. Truffle
+- 2. Ganache -> Local block chain--> you can use any blockchain to test really 😃
+- 3. npm
 
 ## Run
 
-`npm i` to install dependancies
-run `truffle compile` to create the abi(contracts).
-run `truffle migrate` to install it on your blockchain.
-you can use `truffle migrate --reset` to set up new contracts on the blockchain.
-
-run `npm run start` to interact with the blockchain through the front-end React app.
+- `npm i` to install dependancies
+- run `truffle compile` to create the abi(contracts).
+- run `truffle migrate` to install it on your blockchain.
+- you can use `truffle migrate --reset` to set up new contracts on the blockchain.
+-
+- run `npm run start` to interact with the blockchain through the front-end React app.
